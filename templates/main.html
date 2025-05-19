@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">Учебная практика КИИУТ</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-image">
+                    <img src="{{ url_for('static', filename='img/hero.jpg') }}">
+                </div>
+                <div class="hero-text">
+                    <h1>Привет, я <span class="highlight">МЯУ МЯУ МЯУ</span></h1>
+                    <p>И я работаю программистом. Разрабатываю информационные системы с помощью языка С++</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="section">
+            <div class="container">
+                <h2 class="section-title">Мои работы</h2>
+                <div class="works-grid">
+                    <div class="work-card"> 
+                        <h3>Первая лабараторная работа по тестированию</h3>
+                        <a href="{{ url_for('static', filename='pdf/Lr_1.pdf') }}" 
+                           class="work-link"
+                           target="_blank">
+                            <i class="fas fa-file-pdf"></i> Смотреть PDF
+                        </a>
+                    </div>
+                   
+                    <div class="work-card">
+
+                        <h3> Вторая лабараторная работа по тестированию</h3>
+                        <a href="{{ url_for('static', filename='pdf/Lr_2.pdf') }}" 
+                           class="work-link"
+                           target="_blank">
+                            <i class="fas fa-file-pdf"></i> Смотреть PDF
+                        </a>
+                    </div>
+                    <div class="work-card">
+                        <h3>третья лабараторная работа по тестированию</h3>
+                        <a href="{{ url_for('static', filename='pdf/Lr_3.pdf') }}" 
+                           class="work-link"
+                           target="_blank">
+                            <i class="fas fa-file-pdf"></i> Смотреть PDF
+                        </a>
+                    </div>
+                    <div class="work-card">
+                        <h3>Четвертая лабараторная работа по тестированию</h3>
+                        <a href="{{ url_for('static', filename='pdf/Lr_4.pdf') }}" 
+                           class="work-link"
+                           target="_blank">
+                            <i class="fas fa-file-pdf"></i> Смотреть PDF
+                        </a>
+                    </div>
+                    <div class="work-card">
+                        <h3>Пятая лабараторная работа по тестированию</h3>
+                        <a href="{{ url_for('static', filename='pdf/Lr_5.pdf') }}" 
+                           class="work-link"
+                           target="_blank">
+                            <i class="fas fa-file-pdf"></i> Смотреть PDF
+                        </a>
+                    </div>
+                </div>
+                <div class="expand-button" onclick="toggleWorks()">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </section>
+        <section id="skills" class="section bg-light">
+    <div class="container">
+        <h2 class="section-title">Мои навыки</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fas fa-bug"></i>
+                <h3>Реверс-инжиниринг</h3>
+                <p>IDA Pro, Ghidra, x86/ARM</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-microchip"></i>
+                <h3>Си/С++</h3>
+                <p>STL, Boost, Linux Kernel</p>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-linux"></i>
+                <h3>Linux</h3>
+                <p>Bash, Systemd, GDB</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-network-wired"></i>
+                <h3>Сети</h3>
+                <p>TCP/IP, Socket, Packet</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-tools"></i>
+                <h3>Инструменты</h3>
+                <p>GCC, Make, CMake</p>
+            </div>
+        </div>
+    </div>
+</section>
+        <section id="hobbies" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Студенческая жизнь</h2>
+                <div class="hobbies-grid">
+                    <div class="hobby-card">
+                        <i class="fas fa-code-branch fa-3x"></i>
+                        <h3>Хакатоны</h3>
+                        <p>Участие в университетских и всероссийских IT-соревнованиях</p>
+                        <div class="hero-image">
+                            <img src="{{ url_for('static', filename='img/tbank.png') }}">
+                        </div>
+                    </div>
+                    <div class="hobby-card">
+                       <div class="hero-image">
+                            <img src="{{ url_for('static', filename='img/китик.jpg') }}">
+                        </div>
+                    </div>
+                    <div class="hobby-card">
+                        <i class="fas fa-robot fa-3x"></i>
+                        <h3>Робототехника</h3>
+                        <p>Участие в кружке робототехники и соревнованиях Arduino</p>
+                        <div class="hero-image">
+                            <img src="{{ url_for('static', filename='img/Stm32.jpg') }}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stats" class="section stats-section">
+        <div class="container">
+            <h2 class="section-title">Моя активность</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <a href="https://github.com/ars1ks" target="_blank">
+                        <img src="https://github-readme-stats.vercel.app/api?username=ars1ks&show_icons=true&theme=light" 
+                            alt="GitHub Stats">
+                    </a>
+                </div>
+                <div class="stat-card">
+                    <a href="https://github.com/ars1ks" target="_blank">
+                        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ars1ks&layout=compact&theme=light" 
+                            alt="Top Languages">
+                    </a>
+                </div>
+                <div class="stat-card">
+                    <a href="https://leetcode.com/ars1ks/" target="_blank">
+                        <img src="https://leetcard.jacoblin.cool/ars1ks?theme=light&animation=false" 
+                            alt="LeetCode Stats">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <ul class="footer-links">
+                    <li><a href="mailto:example@mail.ru"><i class="fas fa-envelope"></i> а вот и не получишь почту</a></li>
+                    <li><a href="tel:+71234567890"><i class="fas fa-phone"></i> а вот и не дам</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Соцсети</h4>
+                <ul class="social-links">
+                    <li><a href="https://github.com/ars1ks" target="_blank"><i class="fab fa-github"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-telegram"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <p class="copyright">&copy; 2024 МЯУ МЯУ МЯУ. Все права защищены</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>
+        // Обновленный скрипт
+        function toggleWorks() {
+            const worksGrid = document.querySelector('.works-grid');
+            const button = document.querySelector('.expand-button');
+            
+            if (worksGrid.style.maxHeight) {
+                worksGrid.style.maxHeight = null;
+            } else {
+                worksGrid.style.maxHeight = worksGrid.scrollHeight + 'px';
+            }
+            
+            button.classList.toggle('rotated');
+        }
+    </script>
+</body>
+</html>
